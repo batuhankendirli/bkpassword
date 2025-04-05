@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: Props) {
       siteName: t('homepage.page.title'),
       images: [
         {
-          url: '/assets/images/favicon/favicon-512x512.png',
+          url: '/assets/images/favicon/web-app-manifest-512x512.png',
           alt: t('homepage.page.title'),
         },
       ],
@@ -87,7 +87,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     url: BASE_URL.toString(),
     description: (messages as any).homepage.page.description,
     email: 'batuhankndrl@gmail.com',
-    image: `${BASE_URL.toString()}assets/images/favicon/favicon-512x512.png`,
+    image: `${BASE_URL.toString()}assets/images/favicon/web-app-manifest-512x512.png`,
   };
 
   return (
