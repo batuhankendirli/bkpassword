@@ -62,7 +62,7 @@ const PasswordManager = ({ isOpen, setIsOpen }: Props) => {
       if (editField && editFieldRef.current) {
         editFieldRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 50);
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, [editField, passwordToEdit]);
