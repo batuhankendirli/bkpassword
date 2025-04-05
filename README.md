@@ -4,6 +4,8 @@
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/batuhankendirli/bkpassword/raw/main/public/assets/svgs/logo/bkpassword-light.svg">
     <img alt="BKPassword Logo" src="https://github.com/batuhankendirli/bkpassword/raw/main/public/assets/svgs/logo/bkpassword.svg" width="300">
   </picture>
+  <br />
+  <br />
 </div>
 
 A secure, client-side password management and generation tool built with Next.js, TypeScript, and React.
