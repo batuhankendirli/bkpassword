@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/svgs/logo/bkpassword.svg">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/svgs/logo/bkpassword-light.svg">
-    <img alt="BKPassword Logo" src="/assets/svgs/logo/bkpassword.svg" width="300">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/batuhankendirli/bkpassword/raw/main/public/assets/svgs/logo/bkpassword.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/batuhankendirli/bkpassword/raw/main/public/assets/svgs/logo/bkpassword-light.svg">
+    <img alt="BKPassword Logo" src="https://github.com/batuhankendirli/bkpassword/raw/main/public/assets/svgs/logo/bkpassword.svg" width="300">
   </picture>
 </div>
 
