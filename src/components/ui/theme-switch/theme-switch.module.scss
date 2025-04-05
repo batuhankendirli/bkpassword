@@ -1,0 +1,5 @@
+.theme-switch {
+  &__icon {
+    @apply text-foreground-secondary z-[1] flex flex-1 items-center justify-center;
+  }
+}

@@ -1,0 +1,31 @@
+.dialog {
+  @apply fixed left-[50%] top-[50%] z-50 grid w-full max-w-2xl translate-x-[-50%] translate-y-[-50%] gap-4 border border-neutral-darker bg-neutral p-3 shadow-lg outline-0 duration-200 sm:rounded-lg lg:p-6;
+
+  &__overlay {
+    @apply fixed inset-0 z-50 bg-black/80;
+  }
+
+  &__close {
+    @apply absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 disabled:pointer-events-none;
+
+    &__icon {
+      @apply h-4 w-4;
+    }
+  }
+
+  &__header {
+    @apply flex flex-col space-y-1.5 text-center lg:text-left;
+  }
+
+  &__title {
+    @apply text-lg font-semibold leading-none tracking-tight;
+  }
+
+  &__description {
+    @apply text-sm;
+  }
+
+  &__footer {
+    @apply flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2;
+  }
+}

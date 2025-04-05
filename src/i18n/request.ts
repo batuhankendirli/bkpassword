@@ -2,7 +2,8 @@ import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { set } from '@/utils/set';
 
-export const locales = ['en', 'tr'] as const;
+// For now we only support English, but this can be extended in the future.
+export const locales = ['en'] as const;
 export const defaultLocale = 'en';
 export const localePrefix = 'never';
 

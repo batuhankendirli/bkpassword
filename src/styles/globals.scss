@@ -7,8 +7,89 @@
 
 @layer base {
   :root {
+    --background: #e2e2e2;
+    --neutral: #fdfdfd;
+    --neutral-dark: #efefef;
+    --neutral-darker: #cbcbcb;
+    --foreground: #1e1e24;
+    --foreground-secondary: #414148;
+    --foreground-tertiary: #78787c;
+    --foreground-tertiary-50: #78787d7a;
+    --badge-very-weak: #ba2545;
+    --badge-very-weak-text: #f7e7ea;
+    --badge-weak: #c7862e;
+    --badge-weak-text: #f9f3ea;
+    --badge-good: #6c9cb1;
+    --badge-good-text: #eaf1f4;
+    --badge-strong: #a5c896;
+    --badge-strong-text: #f2f7f0;
+    --badge-very-strong: #537a69;
+    --badge-very-strong-text: #eaeeec;
+    --tooltip: #f6f6f6;
+    --layer: #00000026;
+    --toast-success: #6c9cb1;
+    --toast-success-text: #eaf1f4;
+    --toast-success-border: #6c9cb1;
+    --toast-error: #ba2545;
+    --toast-error-text: #f7e7ea;
+    --toast-error-border: #ba2545;
+    --toast-layer: #0000001a;
+  }
+  .dark {
+    --background: #1e1e24;
+    --neutral: #0c0c12;
+    --neutral-dark: #15151b;
+    --neutral-darker: #24242a;
+    --foreground: #e2e2e2;
+    --foreground-secondary: #cecece;
+    --foreground-tertiary: #9c9c9c;
+    --foreground-tertiary-50: #9c9c9c80;
+    --badge-very-weak: #b20d30;
+    --badge-very-weak-text: #f7e7ea;
+    --badge-weak: #c17817;
+    --badge-weak-text: #f9f2e8;
+    --badge-good: #2d728f;
+    --badge-good-text: #eaf1f4;
+    --badge-strong: #7fb069;
+    --badge-strong-text: #f2f7f0;
+    --badge-very-strong: #285943;
+    --badge-very-strong-text: #eaeeec;
+    --tooltip: #121216;
+    --layer: #00000080;
+    --toast-layer: #00000080;
   }
 }
 
-body {
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+
+    & input,
+    button,
+    div,
+    span {
+      @apply outline-2 outline-offset-1 focus:outline focus:outline-foreground-tertiary-50 focus-visible:outline focus-visible:outline-foreground-tertiary-50;
+    }
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-darker) var(--neutral);
+  scroll-behavior: smooth;
+}
+
+input[type='search'] {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
+  }
+  outline: none;
+}
+
+::selection {
+  @apply bg-foreground text-neutral;
 }

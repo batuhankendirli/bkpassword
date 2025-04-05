@@ -5,7 +5,7 @@ export async function generateMetadata() {
   const t = await getTranslations();
 
   return {
-    title: '404: This page could not be found',
+    title: t('404.page.title'),
   };
 }
 export default function CatchAllPage() {

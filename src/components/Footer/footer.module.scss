@@ -1,0 +1,11 @@
+.footer {
+  @apply flex h-16 items-center justify-center text-xs text-foreground-tertiary;
+
+  &__container {
+    @apply flex items-center gap-1;
+
+    &__link {
+      @apply relative font-medium duration-300 before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-0 before:bg-foreground-secondary before:transition-all before:duration-300 hover:text-foreground hover:before:w-full;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.badge {
+  @apply inline-flex min-w-20 items-center justify-center rounded-sm px-1.5 py-0.5 text-xs font-bold;
+
+  &--very-weak {
+    @apply bg-badge-very-weak text-badge-very-weak-text;
+  }
+
+  &--weak {
+    @apply bg-badge-weak text-badge-weak-text;
+  }
+
+  &--good {
+    @apply bg-badge-good text-badge-good-text;
+  }
+
+  &--strong {
+    @apply bg-badge-strong text-badge-strong-text;
+  }
+
+  &--very-strong {
+    @apply bg-badge-very-strong text-badge-very-strong-text;
+  }
+}

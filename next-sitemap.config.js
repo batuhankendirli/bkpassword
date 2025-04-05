@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: '', //! Will add later
+  siteUrl: 'https://bkpassword.vercel.app',
   generateRobotsTxt: true,
   sourceDir: 'build',
 };

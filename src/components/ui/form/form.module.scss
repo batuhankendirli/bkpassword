@@ -1,0 +1,19 @@
+.form {
+  &__item {
+    @apply flex flex-col gap-2;
+  }
+
+  &__label {
+    &--error {
+      @apply text-red-400;
+    }
+  }
+
+  &__description {
+    @apply text-[0.8rem];
+  }
+
+  &__message {
+    @apply text-xs font-medium text-red-400;
+  }
+}

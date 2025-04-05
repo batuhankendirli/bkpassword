@@ -1,0 +1,27 @@
+.alert-dialog {
+  @apply fixed left-[50%] top-[50%] z-50 grid w-[90%] max-w-lg translate-x-[-50%] translate-y-[-50%] gap-2 border border-neutral-darker bg-neutral p-4 shadow-lg outline-0 duration-200 sm:rounded-md;
+
+  &__overlay {
+    @apply fixed inset-0 z-50 bg-black/80;
+  }
+
+  &__header {
+    @apply flex flex-col gap-2 text-center sm:text-left;
+  }
+
+  &__footer {
+    @apply flex gap-2 lg:justify-end;
+  }
+
+  &__title {
+    @apply text-lg font-semibold;
+  }
+
+  &__description {
+    @apply text-sm font-light text-foreground-secondary;
+  }
+
+  &__buttons {
+    @apply -lg:w-full;
+  }
+}

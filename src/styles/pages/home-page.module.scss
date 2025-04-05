@@ -1,0 +1,71 @@
+.home {
+  @apply mx-auto flex min-h-[calc(100dvh_-_4rem)] py-4 lg:max-w-3xl;
+
+  &__wrapper {
+    @apply flex w-full flex-col justify-center;
+
+    &__content {
+      @apply flex min-h-72 flex-col gap-2;
+
+      &__top {
+        @apply flex items-center justify-between -lg:px-2;
+
+        &__logo {
+          @apply w-60 -lg:w-52;
+        }
+
+        &__right {
+          @apply flex items-center gap-2;
+
+          &__info {
+            @apply flex h-9 w-9 items-center justify-center rounded-md border-2 border-transparent bg-neutral text-lg duration-300 hover:border-neutral hover:bg-neutral-dark;
+          }
+        }
+      }
+
+      &__main {
+        @apply flex flex-col gap-3 bg-neutral p-2 lg:rounded-lg lg:p-5;
+
+        &__tabs {
+          @apply w-full;
+
+          &__trigger {
+            @apply flex items-center gap-1;
+          }
+
+          &__content {
+            @apply flex flex-col gap-3;
+
+            &__options {
+              @apply flex items-center gap-2;
+
+              &__text {
+                @apply font-light -lg:hidden;
+              }
+
+              &__option {
+                @apply flex gap-1;
+
+                &__label {
+                  @apply cursor-pointer content-end font-mono text-sm font-semibold leading-none;
+                }
+              }
+            }
+          }
+        }
+
+        &__content {
+          @apply flex w-full flex-col justify-between gap-2 lg:flex-row;
+
+          &__buttons {
+            @apply flex gap-2;
+
+            &__button {
+              @apply -lg:flex-1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

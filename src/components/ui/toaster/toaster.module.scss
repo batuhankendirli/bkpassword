@@ -1,0 +1,19 @@
+.toaster {
+  @apply relative z-[1] flex items-center gap-3;
+
+  &__icon {
+    @apply rounded-full border-4 p-0.5;
+
+    &--success {
+      @apply border-emerald-100/50 bg-emerald-400/50 text-emerald-50;
+    }
+
+    &--error {
+      @apply border-red-200/75 bg-red-500 text-red-50;
+    }
+  }
+
+  &__content {
+    @apply grid gap-1;
+  }
+}

@@ -1,0 +1,11 @@
+.checkbox {
+  @apply flex h-4 w-4 shrink-0 items-center justify-center rounded-sm border border-foreground-tertiary bg-transparent shadow duration-300 hover:bg-neutral-darker data-[state=checked]:border-foreground-tertiary data-[state=checked]:bg-foreground-secondary data-[state=checked]:text-foreground;
+
+  &__indicator {
+    @apply flex items-center justify-center;
+
+    &__icon {
+      @apply text-xs text-background;
+    }
+  }
+}

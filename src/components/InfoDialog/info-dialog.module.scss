@@ -1,0 +1,25 @@
+.info-dialog {
+  &__logo {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 opacity-5 lg:scale-150;
+
+    &--light {
+      @apply opacity-[0.03];
+    }
+  }
+
+  &__title {
+    @apply text-2xl;
+  }
+
+  &__description {
+    @apply flex flex-col gap-4 text-sm text-foreground-secondary;
+
+    &__list {
+      @apply flex list-disc flex-col gap-2 pl-5;
+
+      & span {
+        @apply font-semibold;
+      }
+    }
+  }
+}

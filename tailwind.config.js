@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-roboto)', ...fontFamily.sans],
-        mono: ['var(--font-inconsolata)', ...fontFamily.mono],
+        mono: ['var(--font-noto)', ...fontFamily.sans],
       },
       screens: {
         xsm: '320px',
@@ -28,6 +28,7 @@ module.exports = {
         tall: { raw: '(max-height: 690px)' },
         'tall-sm': { raw: '(max-height: 565px)' },
         'tall-xs': { raw: '(max-height: 420px)' },
+        'lg-short': { raw: '(min-width: 960px) and (max-height: 690px)' },
         '-sm': { max: '519px' },
         '-md': { max: '719px' },
         '-lg': { max: '959px' },
@@ -35,7 +36,39 @@ module.exports = {
         '-xl': { max: '1139px' },
         '-2xl': { max: '1279px' },
       },
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        'foreground-secondary': 'var(--foreground-secondary)',
+        'foreground-tertiary': 'var(--foreground-tertiary)',
+        'foreground-tertiary-50': 'var(--foreground-tertiary-50)',
+        neutral: 'var(--neutral)',
+        'neutral-dark': 'var(--neutral-dark)',
+        'neutral-darker': 'var(--neutral-darker)',
+        'badge-very-weak': 'var(--badge-very-weak)',
+        'badge-very-weak-text': 'var(--badge-very-weak-text)',
+        'badge-weak': 'var(--badge-weak)',
+        'badge-weak-text': 'var(--badge-weak-text)',
+        'badge-good': 'var(--badge-good)',
+        'badge-good-text': 'var(--badge-good-text)',
+        'badge-strong': 'var(--badge-strong)',
+        'badge-strong-text': 'var(--badge-strong-text)',
+        'badge-very-strong': 'var(--badge-very-strong)',
+        'badge-very-strong-text': 'var(--badge-very-strong-text)',
+        tooltip: 'var(--tooltip)',
+        layer: 'var(--layer)',
+        'toast-layer': 'var(--toast-layer)',
+      },
+      keyframes: {
+        rotate360: {
+          '0%': { transform: 'rotate(360deg) scaleX(-1)' },
+          '100%': { transform: 'rotate(0deg) scaleX(-1)' },
+        },
+      },
+      animation: {
+        'rotate-360': 'rotate360 .3s ease-in',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };

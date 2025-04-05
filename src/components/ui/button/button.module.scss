@@ -1,0 +1,29 @@
+.button {
+  @apply relative flex items-center justify-center rounded-md bg-neutral text-foreground-tertiary transition-colors duration-300 hover:bg-background hover:text-foreground-secondary focus-visible:text-foreground-secondary disabled:pointer-events-none;
+
+  &--default {
+    @apply border-2 border-emerald-500/25 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/25 hover:text-emerald-500 focus:bg-emerald-500/25 focus:text-emerald-400 focus:outline-emerald-400/25 focus-visible:bg-emerald-500/25 focus-visible:text-emerald-400 focus-visible:outline-emerald-400/25;
+  }
+
+  &--outline {
+    @apply border-2 border-background hover:border-neutral-darker;
+  }
+
+  &--warning {
+    @apply border-2 border-red-500/25 bg-red-500/10 text-red-400 hover:bg-red-500/25 hover:text-red-500 focus:bg-red-500/25 focus:text-red-400 focus:outline-red-400/25 focus-visible:bg-red-500/25 focus-visible:text-red-400 focus-visible:outline-red-400/25;
+  }
+
+  &__size {
+    &--default {
+      @apply h-9 px-4 py-2 text-sm;
+    }
+
+    &--icon {
+      @apply min-h-11 min-w-11 text-lg;
+
+      &--sm {
+        @apply min-h-8 min-w-8 text-sm;
+      }
+    }
+  }
+}

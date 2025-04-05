@@ -1,0 +1,49 @@
+.error-page {
+  @apply flex min-h-[calc(100dvh_-_4rem)] flex-col items-center;
+
+  &__container {
+    @apply flex flex-1 flex-col items-center justify-center gap-6 px-4;
+
+    &__content {
+      @apply flex flex-col items-center justify-center gap-4 text-center lg:flex-row lg:text-left;
+
+      &__status-code {
+        @apply text-6xl font-medium lg:text-8xl;
+      }
+
+      &__separator {
+        @apply h-16 bg-foreground-tertiary-50 -lg:hidden #{!important};
+      }
+
+      &__message {
+        @apply flex flex-col gap-2;
+
+        &__title {
+          @apply text-xl font-semibold lg:text-3xl;
+        }
+
+        &__description {
+          @apply flex flex-col gap-1.5;
+
+          &__text {
+            @apply font-medium leading-none text-foreground-secondary -lg:text-sm;
+          }
+
+          &__subtext {
+            @apply text-xs leading-none text-foreground-tertiary lg:text-sm;
+          }
+        }
+      }
+    }
+
+    &__buttons {
+      @apply flex gap-2 lg:gap-3;
+
+      &__button {
+        &__icon {
+          @apply mr-2;
+        }
+      }
+    }
+  }
+}
