@@ -5,6 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Footer from '@/components/Footer';
 import Providers from './providers';
+import ThemeColorSwitcher from '@/components/ThemeColorSwitcher';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/request';
 import { notFound } from 'next/navigation';
@@ -112,6 +113,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         <ThemeProvider disableTransitionOnChange>
           <Providers locale={params.locale} messages={messages}>
+            <ThemeColorSwitcher />
             {children}
             <Footer />
           </Providers>
