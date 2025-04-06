@@ -67,7 +67,7 @@
   "500.sub-description": "This is not your fault. Please try again or return to the home page.",
   "500.button.home": "Back to Home",
   "500.button.reload": "Try Again",
-  "footer.rights": "All rights reserved.",
+  "footer.privacy": "Privacy-first password manager",
   "validation.required": "This field is required.",
   "validation.invalid": "Invalid value.",
   "validation.one-of": "Must be one of the following values.",

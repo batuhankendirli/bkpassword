@@ -20,7 +20,7 @@ const Footer = () => {
           </a>
         </p>
         <span>•</span>
-        <span>{t('footer.rights')}</span>
+        <span>{t('footer.privacy')}</span>
       </div>
     </footer>
   );
