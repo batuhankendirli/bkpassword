@@ -15,7 +15,7 @@ const Footer = () => {
       <div className={cx('footer__container')}>
         <p>
           © {currentYear}{' '}
-          <a href="https://batuhankendirli.vercel.app/" target="_blank" className={cx('footer__container__link')}>
+          <a href="https://www.batuhankendirli.com/" target="_blank" className={cx('footer__container__link')}>
             Batuhan Kendirli
           </a>
         </p>
