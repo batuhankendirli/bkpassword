@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 
 interface ProviderProps {
   locale: string;
-  children: React.ReactNode | JSX.Element;
+  children: React.ReactNode | React.JSX.Element;
   messages: any;
 }
 

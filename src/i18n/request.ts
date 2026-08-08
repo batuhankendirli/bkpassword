@@ -8,8 +8,8 @@ export const defaultLocale = 'en';
 export const localePrefix = 'never';
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-  if (!locales.includes(locale as any)) {
+  const locale = await requestLocale;
+  if (!locale || !locales.includes(locale as any)) {
     return notFound();
   }
 

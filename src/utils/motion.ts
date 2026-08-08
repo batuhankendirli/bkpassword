@@ -1,4 +1,6 @@
-export const containerVariants = {
+import type { Variants } from 'framer-motion';
+
+export const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -20,7 +22,7 @@ export const containerVariants = {
   },
 };
 
-export const itemVariants = {
+export const itemVariants: Variants = {
   hidden: { opacity: 0, y: 8 },
   visible: {
     opacity: 1,
@@ -43,7 +45,7 @@ export const itemVariants = {
   },
 };
 
-export const overlayVariants = {
+export const overlayVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -60,7 +62,7 @@ export const overlayVariants = {
   },
 };
 
-export const dividerVariants = {
+export const dividerVariants: Variants = {
   hidden: { scaleX: 0, opacity: 0 },
   visible: {
     scaleX: 1,
@@ -80,7 +82,7 @@ export const dividerVariants = {
   },
 };
 
-export const formVariants = {
+export const formVariants: Variants = {
   hidden: { opacity: 0, y: -10, scale: 0.98 },
   visible: {
     opacity: 1,
@@ -107,7 +109,7 @@ export const formVariants = {
   },
 };
 
-export const formItemVariants = {
+export const formItemVariants: Variants = {
   hidden: { opacity: 0, y: 8, x: 0 },
   visible: {
     opacity: 1,
@@ -129,7 +131,7 @@ export const formItemVariants = {
   },
 };
 
-export const buttonGroupVariants = {
+export const buttonGroupVariants: Variants = {
   hidden: { opacity: 0, y: 8 },
   visible: {
     opacity: 1,
@@ -152,32 +154,32 @@ export const buttonGroupVariants = {
   },
 };
 
-export const emptyWrapperVariants = {
+export const emptyWrapperVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-export const emptyTextVariants = {
+export const emptyTextVariants: Variants = {
   hidden: { opacity: 0, y: 10 },
   visible: { opacity: 1, y: 0 },
 };
 
-export const emptyButtonVariants = {
+export const emptyButtonVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-export const noResultWrapperVariants = {
+export const noResultWrapperVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-export const noResultTextVariants = {
+export const noResultTextVariants: Variants = {
   hidden: { opacity: 0, y: 5 },
   visible: { opacity: 1, y: 0 },
 };
 
-export const noResultButtonVariants = {
+export const noResultButtonVariants: Variants = {
   hidden: { opacity: 0, y: 5 },
   visible: { opacity: 1, y: 0 },
 };

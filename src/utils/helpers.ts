@@ -10,7 +10,7 @@ import { words } from '@/constants/words';
  *
  * @param {RefObject<HTMLElement>} ref - Reference to the DOM element whose content should be selected
  */
-export const selectArea = (ref: RefObject<HTMLElement>) => {
+export const selectArea = (ref: RefObject<HTMLElement | null>) => {
   if (ref.current) {
     const range = document.createRange();
     range.selectNodeContents(ref.current);

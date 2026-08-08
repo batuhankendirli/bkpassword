@@ -29,9 +29,9 @@ const noto = Noto_Sans({
 
 export interface Props {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 const BASE_URL = new URL('https://bkpassword.vercel.app');
@@ -76,8 +76,9 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  if (!(locales as any).includes(params.locale)) return notFound();
-  const messages = await getMessages({ locale: params.locale });
+  const { locale } = await params;
+  if (!(locales as any).includes(locale)) return notFound();
+  const messages = await getMessages({ locale });
 
   const FAVICONS_FOLDER = '/assets/images/favicon';
 
@@ -93,7 +94,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html
-      lang={params.locale}
+      lang={locale}
       className={classNames('min-h-dvh font-sans antialiased', roboto.variable, noto.variable)}
       suppressHydrationWarning
     >
@@ -112,7 +113,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body>
         <ThemeProvider disableTransitionOnChange>
-          <Providers locale={params.locale} messages={messages}>
+          <Providers locale={locale} messages={messages}>
             <ThemeColorSwitcher />
             {children}
             <Footer />

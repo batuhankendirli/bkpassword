@@ -3,7 +3,7 @@ import { useEffect, RefObject } from 'react';
 /**
  * Hook to lock scrolling when a component is focused
  */
-const useScrollLock = (isFocused: boolean, containerRef: RefObject<HTMLElement>) => {
+const useScrollLock = (isFocused: boolean, containerRef: RefObject<HTMLElement | null>) => {
   useEffect(() => {
     const originalBodyOverflow = document.body.style.overflow;
     const originalBodyTouchAction = document.body.style.touchAction;

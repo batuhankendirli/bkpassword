@@ -2,7 +2,7 @@ import React, { ReactElement, cloneElement, forwardRef } from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 type ComponentWithTooltipProps = {
-  children: ReactElement;
+  children: ReactElement<React.HTMLAttributes<HTMLElement> & { ref?: React.Ref<HTMLElement> }>;
   tooltip: string;
   delayDuration?: number;
 } & React.HTMLAttributes<HTMLElement>;

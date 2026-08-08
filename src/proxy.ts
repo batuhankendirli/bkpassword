@@ -8,7 +8,7 @@ const intlMiddleware = createMiddleware({
   localePrefix,
 });
 
-export default async function middleware(req: NextRequest) {
+export default async function proxy(req: NextRequest) {
   const response = intlMiddleware(req);
   return response;
 }
